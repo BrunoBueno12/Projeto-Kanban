@@ -1,0 +1,83 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../imagem/kabanLogin.jpg);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+#quadroLogin{
+    position: absolute;
+    width: 63vw;
+    height: 80vh;
+    border-radius: 10px;
+    color: white;
+    background-color: rgba(146, 188, 48, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: (10px);
+}
+
+#entrada{
+    font-size: 25px;
+    position: absolute;
+    width: max-content;
+    height: 79%;
+    padding-top: 100px;
+    right: 30px;
+    padding-left: 18px;
+    border-left: 2px solid rgb(65, 61, 61);
+}
+
+label{
+    color: rgb(48, 43, 42);
+    display: block;
+    font-size: 30px;
+    margin-top: 8px;
+    margin-bottom: 10px;
+}
+
+input{
+    width: 22vw;
+    height: 5vh;
+    border:none;
+    border-bottom: 1px solid rgba(44, 72, 128, 0.581);
+    outline: none;
+    background-color: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: (10px);
+    font-size: 15px;
+}
+
+#titulo{
+    color: rgb(213, 207, 30);
+    font-size: 20px;
+    position: absolute;
+    left: 12vw;
+    top: 8vh;
+}
+
+#icone{
+    position: absolute;
+    top: 11vh;
+    left: 6vw;
+}
+
+#img{
+    position: absolute;
+    top: 27vh;
+    left: 6.5vw;
+}
+
+#botao{
+    display: block;
+    margin-top: 20px;
+    background-color: rgb(200, 198, 47);
+    border-radius: 5px;
+    border: none;
+    width: 10vw;
+    height: 7vh;
+}
