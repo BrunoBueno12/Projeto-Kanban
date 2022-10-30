@@ -42,8 +42,18 @@ $('.opition').click(function(){
 })
 
 $('#adicionar').click(function(){
-    alert ("Adicionar Tarefa");
-})
+    Swal.fire({
+        title: 'Adicone nova Tarefa',
+        input: 'text',
+        inputAttributes: {
+          autocapitalize: 'off',
+        },
+        showCancelButton: true,
+        confirmButtonText: 'Adicionar',
+        cancelButtonText: 'Cancelar',
+      })
+      })
+    
 
 $('#sair').click(function(){
     alert ("Logout");
