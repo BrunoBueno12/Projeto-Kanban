@@ -1,12 +1,16 @@
-// Logica kanban
+// Logica Clique e arraste
 const coluna = document.querySelectorAll(".coluna");
 
 document.addEventListener("dragstart", (e) => {
   e.target.classList.add("dragging");
+  console.log("teste 3")
 });
 
 document.addEventListener("dragend", (e) => {
   e.target.classList.remove("dragging");
+  //Logica para pegar valor do item arrastado
+  console.log(e.srcElement.dataset.id)
+  //----
 });
 
 coluna.forEach((item) => {
@@ -43,11 +47,19 @@ $('.opition').click(function(){
 
 $('#adicionar').click(function(){
     Swal.fire({
-        title: 'Adicone nova Tarefa',
-        input: 'text',
+        title: 'Adicone nova Tarefa',       
         inputAttributes: {
           autocapitalize: 'off',
         },
+       
+        html:
+          "<form action='adicionar.php' method='post'>"+
+          "<input type='text' class='adicionar' name='tituloC' id='tituloC' placeholder='Titulo'> <br>"+
+          "<textarea class='adicionar' name='descricaoC' id='descricaoC' cols='10' rows='10'"+
+          "placeholder='Descrição'></textarea>"+
+          "<input type='text' class='adicionar' name='responsavelC' id='responsavelC' placeholder='Responsável'><br>"+
+          "</form>",
+        
         showCancelButton: true,
         confirmButtonText: 'Adicionar',
         cancelButtonText: 'Cancelar',
