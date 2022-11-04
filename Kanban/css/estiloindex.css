@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(211, 208, 208);
+    background-color: #91B5B1;
 }
 
 #lateral {
@@ -65,7 +65,8 @@ body{
   }
 
   nav{
-    background-image: linear-gradient(30deg, #634646, #7e6767);
+    /*background-image: linear-gradient(30deg, #634646, #7e6767); */
+    background-color: #589187;
     height: 15vh;
   }
 
@@ -73,7 +74,7 @@ body{
     font-size: 5vh;
     margin-left: 6.5vw;
     padding-top: 4.2vh;
-    color: #f5eeee;
+    color: #FFF;
   }
 
   nav img{
@@ -109,8 +110,8 @@ body{
   
   .item {
     font-size: 2.6vh;
-    color: #E2D5D6;
-    background-color: #666;
+    color: #000;
+    background-color: #d3dee0;
     min-height: 7vh;
     margin-top: 0.8vh;
     padding: 10px;
@@ -146,7 +147,7 @@ body{
   }
 
   .topico{
-    color: #322733;
+    color: #ffffff;
     font-size: 4vh;
     position: fixed;
     top: 20vh;
@@ -165,15 +166,18 @@ body{
   }
 
   #Cpendente{
-    background-color: rgb(235, 87, 87);
+    background-color: #2b7f94;
+   /* background-image: linear-gradient(20deg, #0b8888, #0e666e) */
   }
 
   #Candamento{
-    background-color: rgb(184, 185, 81);
+    background-color: #2b7f94;
+    /* background-image: linear-gradient(20deg, #17757e, #11595f) */
   }
 
   #Cconcluido{
-    background-color: rgb(68, 170, 68);
+    background-color: #2b7f94;
+    /*background-image: linear-gradient(20deg, #0c6d75, #07484e) */
   } 
 
   .adicionar{
