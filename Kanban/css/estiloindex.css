@@ -2,14 +2,14 @@ body{
     background-color: #91B5B1;
 }
 
-#lateral {
+/*#lateral {
     color: #fff;
     width: 15vw;
     height: 85vh;
     background-image: linear-gradient(30deg, #067280, #002e34);  
     position: absolute;
     top: 15vh;
-  }
+  }*/
 
   .itens{
     font-size: 25px;
@@ -47,19 +47,19 @@ body{
     margin-bottom: 25px;
   }
 
-  #sair{
+  #sair2{
     font-size: 25px;
     position: absolute;
     bottom: 4vh;
-    left: 3.5vw;
+    left: 1.5vw;
     height: 40px;
     width: 100px;
     border: none;
     border-radius: 2px;
-    background-color: #00c16c;
+    background-color: #51aa9a;
   }
 
-  #sair img{
+  #sair2 img{
     height: 25px;
     width: 25px;
   }
@@ -85,7 +85,27 @@ body{
     height: 6vh;
   }
 
- 
+  #infoUsuario{
+    position: absolute;
+    right: 5vw;
+    top: 3.5vh;
+    margin-right: 4vh;
+  }
+
+  #imgUsuario{
+    width: 3.2vw;
+    height: 6.5vh;
+    position: absolute;
+    top: 1vh;
+  }
+
+  #nomeUsuario{
+    font-size: 1.5em;
+    color: #FFF;
+    position: absolute;
+    right: 0vw;
+  }
+
   .kanban {
     display: flex;
     top: 18vh;
@@ -109,6 +129,7 @@ body{
   }
   
   .item {
+    position: relative;
     font-size: 2.6vh;
     color: #000;
     background-color: #d3dee0;
@@ -139,11 +160,12 @@ body{
   }
 
   .opition{
+    position: absolute;
     width: max-content;
     height: max-content;
     background:none ;
     border: none;
-    margin-left: 26vh;
+    right: 1vw;
   }
 
   .topico{
@@ -193,4 +215,31 @@ body{
     resize: none;
   }
 
+  #imgAdic{ 
+    width: 4vh;
+  }
   
+  #adicionar{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    background-color: #51aa9a;
+    z-index: 20;
+    border: none;
+    box-shadow: 0 1px 5px rgba(0,0,0,.4);
+    position: fixed;
+    bottom:3vh;
+    right: 1vw;
+  }
+
+  #formAdd{
+    height: 35vh;
+    margin-top: 6vh;
+  }
+
+  #formAdd input textarea{
+    width: 55%;
+    margin-top: 2%;
+  }
+

@@ -53,10 +53,10 @@ $('#adicionar').click(function(){
         },
        
         html:
-          "<form action='adicionar.php' method='post'>"+
-          "<input type='text' class='adicionar' name='tituloC' id='tituloC' placeholder='Titulo'> <br>"+
+          "<form id='formAdd' action='adicionar.php' method='post'>"+
+          "<input type='text' class='adicionar' name='tituloC' id='tituloC' placeholder='Titulo'> <br> <br>"+
           "<textarea class='adicionar' name='descricaoC' id='descricaoC' cols='10' rows='10'"+
-          "placeholder='Descrição'></textarea>"+
+          "placeholder='Descrição'></textarea> <br><br>"+
           "<input type='text' class='adicionar' name='responsavelC' id='responsavelC' placeholder='Responsável'><br>"+
           "</form>",
         
