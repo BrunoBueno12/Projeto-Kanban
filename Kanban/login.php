@@ -26,16 +26,16 @@ if($usuarioLogado == true){
  
     <div id="quadroLogin">
 
-        <img id="icone" src="./imagem/iconeKanban.png">
+      <!-- <img id="icone" src="./imagem/iconeKanban.png"> -->
 
-        <img id="img" src="./imagem/kanbanimg.png">
+       <!-- <img id="img" src="./imagem/kanbanimg.png"> -->
 
         <div id="titulo"><h1>KANBAN</h1></div>
 
         <div id="entrada">
             <form action="./PHP/logar.php" method="post">
 
-            <label for="email">E-mail:</label> 
+            <label for="email">E-mail:</label>
             <input type="email" name="email" class="inLogin"> 
 
             <label for="senha">Senha:</label> 
@@ -46,6 +46,8 @@ if($usuarioLogado == true){
             </form>
         </div>
     </div>
+
+    <a  href='cadastro.php'><button id='botaoCad'>Cadastrar</button></a>
     
 </body>
 </html>

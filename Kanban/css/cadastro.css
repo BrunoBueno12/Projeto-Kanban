@@ -1,0 +1,33 @@
+body{
+    margin-top: 25vh;
+}
+#FormCad{
+    background-color: #2b7f94;
+    width: max-content;
+    height:max-content;
+    padding: 4vw;
+    padding-top: 3.5vh;
+    padding-bottom: 5vh;
+    margin: auto auto;   
+    border-radius: 3vh;
+}
+
+form{
+    width: 100%;
+}
+
+.entrada{
+    margin-bottom: 2vh;
+    height: 2vh;
+    width: 100%;
+}
+
+#FormCad h1{
+    margin-top: 0;
+    text-align: center;
+}
+
+#botao{
+    width: 103%;
+    height: 4vh;
+}

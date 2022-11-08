@@ -1,5 +1,5 @@
 body{
-    background-color: #91B5B1;
+    background-color: rgb(238, 238, 238);
 }
 
 /*#lateral {
@@ -48,20 +48,21 @@ body{
   }
 
   #sair2{
-    font-size: 25px;
+    font-size: 2em;
     position: absolute;
-    bottom: 4vh;
+    bottom: 4.5vh;
     left: 1.5vw;
-    height: 40px;
-    width: 100px;
+    height: 6vh;
+    width: 6.5vw;
     border: none;
-    border-radius: 2px;
+    border-radius: 0.5vh;
     background-color: #51aa9a;
+    padding-bottom: 4.5vh;
   }
 
   #sair2 img{
-    height: 25px;
-    width: 25px;
+    height: 2.8vh;
+    width: 1.5vw;
   }
 
   nav{
@@ -71,9 +72,10 @@ body{
   }
 
   nav h1{
-    font-size: 5vh;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 4em;
     margin-left: 6.5vw;
-    padding-top: 4.2vh;
+    padding-top: 2.8vh;
     color: #FFF;
   }
 
@@ -121,8 +123,7 @@ body{
     flex-direction: column;
     gap: 10px;
     padding: 10px;
-    padding-top: 7.5vh;
-    background-color: #066261;
+    background-color: #2b7f94;
     width: 22vw;
     border-radius: 5px;
     margin-left: 5vw;
@@ -151,9 +152,7 @@ body{
     opacity: 0.5;
   }
 
-  .topico{
-    top: 3vh;
-    position: absolute;
+  .topico{ 
     color: #322733;
     text-align: center;
     font-size: 20px;
@@ -170,37 +169,10 @@ body{
 
   .topico{
     color: #ffffff;
-    font-size: 4vh;
-    position: fixed;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 4.5vh;
     top: 20vh;
   }
-
-  #pendente{
-    margin-left: 6vw;
-  }
-
-  #andamento{
-    margin-left: 3.5vw;
-  }
-
-  #concluido{
-    margin-left: 6.2vw;
-  }
-
-  #Cpendente{
-    background-color: #2b7f94;
-   /* background-image: linear-gradient(20deg, #0b8888, #0e666e) */
-  }
-
-  #Candamento{
-    background-color: #2b7f94;
-    /* background-image: linear-gradient(20deg, #17757e, #11595f) */
-  }
-
-  #Cconcluido{
-    background-color: #2b7f94;
-    /*background-image: linear-gradient(20deg, #0c6d75, #07484e) */
-  } 
 
   .adicionar{
     margin-top: 2vh;
@@ -216,14 +188,15 @@ body{
   }
 
   #imgAdic{ 
-    width: 4vh;
+    width: 1vh;
+    height: 1vh;
   }
   
   #adicionar{
     position: absolute;
-    width: 60px;
-    height: 60px;
-    border-radius: 30px;
+    width: 4.5vw;
+    height: 4.5vw;
+    border-radius: 2.5vw;
     background-color: #51aa9a;
     z-index: 20;
     border: none;
@@ -243,3 +216,28 @@ body{
     margin-top: 2%;
   }
 
+  @media only screen and (max-width: 800px) {
+  .kanban {
+    display: block;
+    position: absolute;
+    right: 25vw;
+    }
+
+    .coluna {
+      width: 50vw;
+      margin-bottom: 5vh;
+    }
+
+    nav h1{
+      font-size: 2em;
+      margin-left: 6.5vw;
+      padding-top: 2.8vh;
+    }
+
+    nav img{
+      width: 0vw;
+      height: 0vh;
+    }
+
+    
+  }

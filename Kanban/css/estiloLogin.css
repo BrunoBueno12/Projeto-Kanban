@@ -26,19 +26,20 @@ body{
 #entrada{
     font-size: 25px;
     position: absolute;
-    width: max-content;
+    width: 80%;
     height: 71.5%;
-    padding-top: 2vh;
-    right: 30px;
+    padding-top: 0vh;
+    left: 14vw;
     padding-left: 18px;
 }
 
 label{
     color: rgb(243, 239, 239);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     display: block;
-    font-size: 30px;
-    margin-top: 8px;
-    margin-bottom: 10px;
+    font-size: 1.5em;
+    margin-top: 2vh;
+    margin-bottom: 3vh;
 }
 
 #img{
@@ -50,7 +51,7 @@ label{
 }
 
 input{
-    width: 22vw;
+    width: 30vw;
     height: 5vh;
     border:none;
     border-bottom: 1px solid rgba(44, 72, 128, 0.581);
@@ -62,7 +63,8 @@ input{
 }
 
 #titulo{
-    color: #30bcef;
+    color: #FFF;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 4vh;
     text-align: center;
     top: 0vh;
@@ -77,14 +79,36 @@ input{
 }
 
 #botao{
+    font-size: 1.5em;
     display: block;
-    margin-top: 20px;
+    margin-top: 10vh;
     background-color: #30bcef;
     border-radius: 5px;
     border: none;
-    width: 10vw;
+    width: 30vw;
     height: 7vh;
 }
+
+#botao{
+    cursor: pointer;
+}
+
+#botaoCad{
+    position: absolute;
+    bottom: 2vh;
+    right: 2vw;
+    font-size: 1.5em;
+    background-color: #30bcef;
+    border-radius: 5px;
+    border: none;
+    width: 8vw;
+    height: 7vh;
+}
+
+#botaoCad:hover{
+    cursor: pointer;
+}
+
 
 @media only screen and (max-width: 800px) {
     #img{
@@ -107,7 +131,7 @@ input{
         font-size: 1.5em;
         display: block;
         margin-top: 20px;
-        background-color: rgb(200, 198, 47);
+        background-color: #30bcef;
         border-radius: 5px;
         border: none;
         width: 80%;
