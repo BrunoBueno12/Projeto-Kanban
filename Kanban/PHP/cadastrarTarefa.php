@@ -1,7 +1,7 @@
 <?php
     include_once "bd.php";
     
-    session_start();
+    /*session_start();*/
 
     $tituloC =isset ($_POST['tituloC']) ?  $_POST['tituloC'] : '';
     $descricaoC = isset($_POST['descricaoC']) ?  $_POST['descricaoC'] : '';

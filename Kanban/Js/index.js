@@ -44,7 +44,7 @@ function getNewPosition(coluna, posY) {
 $('.opition').click(function(){
     alert ("Editar ou excluir");
 })
-
+/*
 $('#adicionar').click(function(){
     Swal.fire({
         title: 'Adicone nova Tarefa',       
@@ -64,11 +64,43 @@ $('#adicionar').click(function(){
         
         showCancelButton: false,
         showConfirmButton: false,
-        /*confirmButtonText: 'Adicionar', */
-        /*cancelButtonText: 'Cancelar', */
+       /* confirmButtonText: 'Adicionar', 
+       /* cancelButtonText: 'Cancelar', 
       })
-      })
+      }) */
     
+
+
+
+document.getElementById('adicionar').addEventListener('click',function(){
+        Swal.fire({
+          title: 'Adicone nova Tarefa',       
+          inputAttributes: {
+            autocapitalize: 'off',
+          },
+          background: '#EEEEEE',  
+          
+            html:
+          "<form id='formAdd' action='cadastrarTarefa.php' method='post'>"+
+          "<input type='text' class='adicionar' name='tituloC' id='tituloC' placeholder='Titulo'> <br> <br>"+
+          "<textarea class='adicionar' name='descricaoC' id='descricaoC' cols='10' rows='10'"+
+          "placeholder='Descrição'></textarea> <br><br>"+
+          "<input type='text' class='adicionar' name='responsavelC' id='responsavelC' placeholder='Responsável'><br>"+
+          "<button value='submit' id='enviarAdd'>Adicionar</button>"+
+          "</form>",
+          confirmButtonText: `CADASTRAR`,
+          confirmButtonColor: "#fff03",
+          })
+          .then((result) => {
+            if (result.isConfirmed) {
+              var form = document.getElementById('form');
+              form.submit()
+            }
+          })
+          
+    });
+
+
 
 $('#sair').click(function(){
     alert ("Logout");

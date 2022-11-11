@@ -82,7 +82,7 @@ body{
   nav img{
     position: absolute;
     left: 2vw;
-    top: 4vh;
+    top: 4.2vh;
     width: 3.5vw;
     height: 6vh;
   }
@@ -95,17 +95,19 @@ body{
   }
 
   #imgUsuario{
-    width: 3.2vw;
-    height: 6.5vh;
+    width: 3.4vw;
+    height: 6.7vh;
     position: absolute;
     top: 1vh;
   }
 
   #nomeUsuario{
-    font-size: 1.5em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 2.2em;
     color: #FFF;
     position: absolute;
-    right: 0vw;
+    right: -1vw;
+    top: 1.2vh;
   }
 
   .kanban {
