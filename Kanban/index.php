@@ -34,7 +34,8 @@ $idUsuario = isset($_SESSION['id']) ? $_SESSION['id'] : "0";
     <div id='infoUsuario'>
     <p id='nomeUsuario'><?php echo " $nomeUsuario " ?></p>
         <img id='imgUsuario' src="./imagem/iconUsuario.png" >
-    </div>
+    </div> 
+
 
   </nav>
    
@@ -81,6 +82,8 @@ $idUsuario = isset($_SESSION['id']) ? $_SESSION['id'] : "0";
     <script src="./Js/index.js"></script>
     <script src="./SweetAlert/dist/sweetalert2.js"></script>
 
+
+    
  
 </body>
 </html>

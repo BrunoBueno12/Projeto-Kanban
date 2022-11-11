@@ -188,8 +188,8 @@ body{
   }
 
   #imgAdic{ 
-    width: 1vh;
-    height: 1vh;
+    width: 4.5vh;
+    height: 4.5vh;
   }
   
   #adicionar{
@@ -208,12 +208,30 @@ body{
 
   #formAdd{
     height: 35vh;
-    margin-top: 6vh;
+    margin-top: 0vh;
+    margin-bottom:3.5vh;
+  }
+
+  #formAdd input{
+    background-color: #EEEEEE;
   }
 
   #formAdd input textarea{
     width: 55%;
     margin-top: 2%;
+    background-color: #EEEEEE;
+  }
+
+  #descricaoC{
+    background-color: #EEEEEE;
+  }
+
+  #enviarAdd{
+    margin-top: 4.5vh;
+    border: none;
+    height: 5vh;
+    width: 16vw;
+    background-color: #51aa9a;
   }
 
   @media only screen and (max-width: 800px) {
@@ -239,5 +257,4 @@ body{
       height: 0vh;
     }
 
-    
   }

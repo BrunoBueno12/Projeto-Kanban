@@ -51,18 +51,21 @@ $('#adicionar').click(function(){
         inputAttributes: {
           autocapitalize: 'off',
         },
-       
+        background: '#EEEEEE',
+
         html:
-          "<form id='formAdd' action='adicionar.php' method='post'>"+
+          "<form id='formAdd' action='cadastrarTarefa.php' method='post'>"+
           "<input type='text' class='adicionar' name='tituloC' id='tituloC' placeholder='Titulo'> <br> <br>"+
           "<textarea class='adicionar' name='descricaoC' id='descricaoC' cols='10' rows='10'"+
           "placeholder='Descrição'></textarea> <br><br>"+
           "<input type='text' class='adicionar' name='responsavelC' id='responsavelC' placeholder='Responsável'><br>"+
+          "<button value='submit' id='enviarAdd'>Adicionar</button>"+
           "</form>",
         
-        showCancelButton: true,
-        confirmButtonText: 'Adicionar',
-        cancelButtonText: 'Cancelar',
+        showCancelButton: false,
+        showConfirmButton: false,
+        /*confirmButtonText: 'Adicionar', */
+        /*cancelButtonText: 'Cancelar', */
       })
       })
     
