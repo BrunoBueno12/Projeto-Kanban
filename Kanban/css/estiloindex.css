@@ -52,30 +52,30 @@ body{
     position: absolute;
     bottom: 4.5vh;
     left: 1.5vw;
-    height: 6vh;
-    width: 6.5vw;
+    height: 4vh;
+    width: 8vw;
     border: none;
     border-radius: 0.5vh;
     background-color: #51aa9a;
-    padding-bottom: 4.5vh;
+    padding-bottom: 8.5vh;
   }
 
   #sair2 img{
-    height: 2.8vh;
-    width: 1.5vw;
+    height: 4vh;
+    width: 2vw;
   }
 
   nav{
     /*background-image: linear-gradient(30deg, #634646, #7e6767); */
     background-color: #589187;
-    height: 15vh;
+    height: 16vh;
   }
 
   nav h1{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 4em;
     margin-left: 6.5vw;
-    padding-top: 2.8vh;
+    padding-top: 2vh;
     color: #FFF;
   }
 
@@ -114,7 +114,7 @@ body{
     display: flex;
     top: 18vh;
     position: absolute;
-    right: 10vw;
+    right: 7vw;
     height: 75vh;
     gap: 10px;
     padding: 10px;
@@ -126,9 +126,11 @@ body{
     gap: 10px;
     padding: 10px;
     background-color: #2b7f94;
-    width: 22vw;
+    width: 23vw;
     border-radius: 5px;
     margin-left: 5vw;
+    min-height: 75vh;
+    height: max-content;
   }
   
   .item {
@@ -136,10 +138,11 @@ body{
     font-size: 2.6vh;
     color: #000;
     background-color: #d3dee0;
-    min-height: 7vh;
+    height: max-content;
     margin-top: 0.8vh;
     padding: 10px;
     border-radius: 5px;
+    width: 21vw;
   }
 
   .item:hover{
@@ -166,7 +169,8 @@ body{
     height: max-content;
     background:none ;
     border: none;
-    right: 1vw;
+    right: 0.6vw;
+    top: 8vh;
   }
 
   .topico{
@@ -209,7 +213,7 @@ body{
   }
 
   #formAdd{
-    height: 35vh;
+    height: 38vh;
     margin-top: 0vh;
     margin-bottom:3.5vh;
   }
@@ -219,7 +223,7 @@ body{
   }
 
   #formAdd input textarea{
-    width: 55%;
+    width: 100%;
     margin-top: 2%;
     background-color: #EEEEEE;
   }
@@ -234,6 +238,25 @@ body{
     height: 5vh;
     width: 16vw;
     background-color: #51aa9a;
+  }
+
+  .tituloTarefa{
+    font-size: 1.4em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bolder;
+    margin-bottom: 2.5vh;
+  }
+
+  .decTarefa{
+    font-size: 1em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    max-width: 18vw;
+  }
+
+  .respTarefa{
+    margin-bottom: 0px;
+    font-size: 0.8em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   }
 
   @media only screen and (max-width: 800px) {
@@ -257,6 +280,29 @@ body{
     nav img{
       width: 0vw;
       height: 0vh;
+    }
+
+    #sair2 img{
+      height: 0vh;
+      width: 0vw;
+    }
+
+    #sair2{
+      font-size: 1.6em;
+      height: 8vh;
+      width: 12vw;
+      border: none;
+      border-radius: 0.5vh;
+      background-color: #51aa9a;
+      padding-bottom: 8.5vh;
+    }
+
+    .item {
+      width: 45vw;
+    }
+
+    .decTarefa{
+      max-width: max-content;
     }
 
   }

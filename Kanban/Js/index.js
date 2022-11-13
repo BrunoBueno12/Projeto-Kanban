@@ -11,6 +11,10 @@ document.addEventListener("dragend", (e) => {
   //Logica para pegar valor do item arrastado
   console.log(e.srcElement.dataset.id)
   //----
+
+  //if (coluna.srcElement.dataset.id == 2){
+  //  e.srcElement.dataset.id = 2}
+
 });
 
 coluna.forEach((item) => {
@@ -44,35 +48,9 @@ function getNewPosition(coluna, posY) {
 $('.opition').click(function(){
     alert ("Editar ou excluir");
 })
-/*
-$('#adicionar').click(function(){
-    Swal.fire({
-        title: 'Adicone nova Tarefa',       
-        inputAttributes: {
-          autocapitalize: 'off',
-        },
-        background: '#EEEEEE',
 
-        html:
-          "<form id='formAdd' action='cadastrarTarefa.php' method='post'>"+
-          "<input type='text' class='adicionar' name='tituloC' id='tituloC' placeholder='Titulo'> <br> <br>"+
-          "<textarea class='adicionar' name='descricaoC' id='descricaoC' cols='10' rows='10'"+
-          "placeholder='Descrição'></textarea> <br><br>"+
-          "<input type='text' class='adicionar' name='responsavelC' id='responsavelC' placeholder='Responsável'><br>"+
-          "<button value='submit' id='enviarAdd'>Adicionar</button>"+
-          "</form>",
-        
-        showCancelButton: false,
-        showConfirmButton: false,
-       /* confirmButtonText: 'Adicionar', 
-       /* cancelButtonText: 'Cancelar', 
-      })
-      }) */
     
-
-
-
-document.getElementById('adicionar').addEventListener('click',function(){
+    $('#adicionar').click(function(){
         Swal.fire({
           title: 'Adicone nova Tarefa',       
           inputAttributes: {
@@ -81,27 +59,20 @@ document.getElementById('adicionar').addEventListener('click',function(){
           background: '#EEEEEE',  
           
             html:
-          "<form id='formAdd' action='cadastrarTarefa.php' method='post'>"+
+          "<form id='formAdd' action='./PHP/cadastrarTarefa.php' method='post' autocomplete = 'off'>"+
           "<input type='text' class='adicionar' name='tituloC' id='tituloC' placeholder='Titulo'> <br> <br>"+
           "<textarea class='adicionar' name='descricaoC' id='descricaoC' cols='10' rows='10'"+
           "placeholder='Descrição'></textarea> <br><br>"+
           "<input type='text' class='adicionar' name='responsavelC' id='responsavelC' placeholder='Responsável'><br>"+
           "<button value='submit' id='enviarAdd'>Adicionar</button>"+
           "</form>",
-          confirmButtonText: `CADASTRAR`,
+          showConfirmButton: false,
           confirmButtonColor: "#fff03",
           })
-          .then((result) => {
+          /*.then((result) => {
             if (result.isConfirmed) {
-              var form = document.getElementById('form');
+              var form = document.getElementById('formAdd');
               form.submit()
             }
-          })
-          
+          })*/         
     });
-
-
-
-$('#sair').click(function(){
-    alert ("Logout");
-})
