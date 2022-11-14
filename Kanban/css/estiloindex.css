@@ -49,7 +49,7 @@ body{
 
   #sair2{
     font-size: 2em;
-    position: absolute;
+    position: fixed;
     bottom: 4.5vh;
     left: 1.5vw;
     height: 4vh;
