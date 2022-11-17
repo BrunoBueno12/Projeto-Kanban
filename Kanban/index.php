@@ -52,75 +52,81 @@ $idUsuario = isset($_SESSION['id']) ? $_SESSION['id'] : "0";
   --> 
 
   <div class="kanban">
-    
-    <div class="coluna" id="Cpendente">
-      <h1 class="topico" id="pendente">Pendente</h1>
-      <!--
-      <div class="item" data-id="1" draggable="true">Card 01 <button class="opition"><img src="./imagem/opcoes.png" width="20px" height="20px"></button></div>
-      <div class="item" data-id="2" draggable="true">Card 02 <button class="opition"><img src="./imagem/opcoes.png" width="20px" height="20px"></button></div>
-      -->
-      <?php 
-          include_once "./PHP/bd.php";
-          
-          $sql = "SELECT * FROM tarefas WHERE situacao = 1 AND usuario = $idUsuario";
-          $resultado = $bd->query($sql);
-          $registros = $resultado -> fetchAll();
-
-          foreach ($registros as $r)
-
-          echo "<div class='item' data-id='" . $r['situacao'] . "'draggable='true'> 
-          <h3 class='tituloTarefa'>" . $r['titulo'] . "</h3> <p class='decTarefa'>"
-          . $r['descricao'] . "</p> <h5 class='respTarefa'> Responsavel: " . $r['responsavel'] . 
-          "<button class='opition'><img src='./imagem/opcoes.png' width='20px' height='20px'></button></div>"
-      ?>
-
-    </div>
-    
-    <div class="coluna" id="Candamento" data-id="2">
-      <h1 class="topico" id="andamento">Em Andamento</h1>
+      <div>
       
-<!-- 
-      <div class="item" draggable="true">Card 03 <button class="opition"><img src="./imagem/opcoes.png" width="20px" height="20px"></button></div>
-      <div class="item" draggable="true">Card 04 <button class="opition"><img src="./imagem/opcoes.png" width="20px" height="20px"></button></div>
---> 
-<?php 
-          include_once "./PHP/bd.php";
-          
-          $sql = "SELECT * FROM tarefas WHERE situacao = 2 AND usuario = $idUsuario";
-          $resultado = $bd->query($sql);
-          $registros = $resultado -> fetchAll();
+        <h1 class="topico" id="pendente">Pendente</h1>
+        <div class="coluna" id="Cpendente" data-id="1">
+        <!--
+        <div class="item" data-id="1" draggable="true">Card 01 <button class="opition"><img src="./imagem/opcoes.png" width="20px" height="20px"></button></div>
+        <div class="item" data-id="2" draggable="true">Card 02 <button class="opition"><img src="./imagem/opcoes.png" width="20px" height="20px"></button></div>
+        -->
+        <?php 
+            include_once "./PHP/bd.php";
+            
+            $sql = "SELECT * FROM tarefas WHERE situacao = 1 AND usuario = $idUsuario";
+            $resultado = $bd->query($sql);
+            $registros = $resultado -> fetchAll();
 
-          foreach ($registros as $r)
+            foreach ($registros as $r)
 
-          echo "<div class='item' data-id='" . $r['situacao'] . "'draggable='true'> 
-          <h3 class='tituloTarefa'>" . $r['titulo'] . "</h3> <p class='decTarefa'>"
-          . $r['descricao'] . "</p> <h5 class='respTarefa'> Responsavel: " . $r['responsavel'] . 
-          "<button class='opition'><img src='./imagem/opcoes.png' width='20px' height='20px'></button></div>"
-      ?>
+            echo "<div class='item' data-id='" . $r['id'] . "'draggable='true'> 
+            <h3 class='tituloTarefa'>" . $r['titulo'] . "</h3> <p class='decTarefa'>"
+            . $r['descricao'] . "</p> <h5 class='respTarefa'> Responsavel: " . $r['responsavel'] . 
+            "<button class='opition'><img src='./imagem/opcoes.png' width='20px' height='20px'></button></div>"
+        ?>
 
-    </div>
-    
-    <div class="coluna" id="Cconcluido">
-      <h1 class="topico" id="concluido">Concluído</h1>
-<!--      
-      <div class="item" draggable="true">Card 05 <button class="opition"><img src="./imagem/opcoes.png" width="20px" height="20px"></button></div>
-      <div class="item" draggable="true">Card 06 <button class="opition"><img src="./imagem/opcoes.png" width="20px" height="20px"></button></div>
--->    
-      <?php 
-          include_once "./PHP/bd.php";
-          
-          $sql = "SELECT * FROM tarefas WHERE situacao = 3 AND usuario = $idUsuario";
-          $resultado = $bd->query($sql);
-          $registros = $resultado -> fetchAll();
+      </div>
+      </div>
+      
+      <div>
+        <h1 class="topico" id="andamento">Em Andamento</h1>
+        <div class="coluna" id="Candamento" data-id="2">
+        
+  <!-- 
+        <div class="item" draggable="true">Card 03 <button class="opition"><img src="./imagem/opcoes.png" width="20px" height="20px"></button></div>
+        <div class="item" draggable="true">Card 04 <button class="opition"><img src="./imagem/opcoes.png" width="20px" height="20px"></button></div>
+  --> 
+  <?php 
+            include_once "./PHP/bd.php";
+            
+            $sql = "SELECT * FROM tarefas WHERE situacao = 2 AND usuario = $idUsuario";
+            $resultado = $bd->query($sql);
+            $registros = $resultado -> fetchAll();
 
-          foreach ($registros as $r)
+            foreach ($registros as $r)
 
-          echo "<div class='item' data-id='" . $r['situacao'] . "'draggable='true'> 
-          <h3 class='tituloTarefa'>" . $r['titulo'] . "</h3> <p class='decTarefa'>"
-          . $r['descricao'] . "</p> <h5 class='respTarefa'> Responsavel: " . $r['responsavel'] . 
-          "<button class='opition'><img src='./imagem/opcoes.png' width='20px' height='20px'></button></div>"
-      ?>
-    
+            echo "<div class='item' data-id='" . $r['id'] . "'draggable='true'> 
+            <h3 class='tituloTarefa'>" . $r['titulo'] . "</h3> <p class='decTarefa'>"
+            . $r['descricao'] . "</p> <h5 class='respTarefa'> Responsavel: " . $r['responsavel'] . 
+            "<button class='opition'><img src='./imagem/opcoes.png' width='20px' height='20px'></button></div>"
+        ?>
+
+      </div>
+      </div>
+      
+      <div>
+        <h1 class="topico" id="concluido">Concluído</h1>
+        <div class="coluna" id="Cconcluido" data-id="3">
+  <!--      
+        <div class="item" draggable="true">Card 05 <button class="opition"><img src="./imagem/opcoes.png" width="20px" height="20px"></button></div>
+        <div class="item" draggable="true">Card 06 <button class="opition"><img src="./imagem/opcoes.png" width="20px" height="20px"></button></div>
+  -->    
+        <?php 
+            include_once "./PHP/bd.php";
+            
+            $sql = "SELECT * FROM tarefas WHERE situacao = 3 AND usuario = $idUsuario";
+            $resultado = $bd->query($sql);
+            $registros = $resultado -> fetchAll();
+
+            foreach ($registros as $r)
+
+            echo "<div class='item' data-id='" . $r['id'] . "'draggable='true'> 
+            <h3 class='tituloTarefa'>" . $r['titulo'] . "</h3> <p class='decTarefa'>"
+            . $r['descricao'] . "</p> <h5 class='respTarefa'> Responsavel: " . $r['responsavel'] . 
+            "<button class='opition'><img src='./imagem/opcoes.png' width='20px' height='20px'></button></div>"
+        ?>
+      
+      </div>
     </div>
   </div>
 

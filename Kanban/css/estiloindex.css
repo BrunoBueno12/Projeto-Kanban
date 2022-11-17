@@ -57,7 +57,7 @@ body{
     border: none;
     border-radius: 0.5vh;
     background-color: #51aa9a;
-    padding-bottom: 8.5vh;
+    padding-bottom: 6vh;
   }
 
   #sair2 img{
@@ -135,14 +135,22 @@ body{
   
   .item {
     position: relative;
-    font-size: 2.6vh;
+    font-size: 1.2em;
     color: #000;
     background-color: #d3dee0;
-    height: max-content;
     margin-top: 0.8vh;
     padding: 10px;
     border-radius: 5px;
     width: 21vw;
+  }
+
+/* corrigir overflow*/
+
+  .decTarefa{
+    text-overflow: ellipsis;
+    white-space: break-word;
+    max-height: 10vh;
+    overflow: hidden;
   }
 
   .item:hover{

@@ -8,12 +8,13 @@ document.addEventListener("dragstart", (e) => {
 
 document.addEventListener("dragend", (e) => {
   e.target.classList.remove("dragging");
-  //Logica para pegar valor do item arrastado
-  console.log(e.srcElement.dataset.id)
-  //----
 
-  //if (coluna.srcElement.dataset.id == 2){
-  //  e.srcElement.dataset.id = 2}
+  const item = e.target.dataset.id;
+  const coluna = e.target.parentElement.dataset.id;
+  //window.location.href = (`./PHP/alteraStatus.php?item=${item}&coluna=${coluna}`)
+  console.log( `./PHP/alteraStatus.php?item=${item}&coluna=${coluna}`)
+  location.assign(`./PHP/alteraStatus.php?item=${item}&coluna=${coluna}`);
+
 
 });
 
@@ -21,6 +22,7 @@ coluna.forEach((item) => {
   item.addEventListener("dragover", (e) => {
     const dragging = document.querySelector(".dragging");
     const applyAfter = getNewPosition(item, e.clientY);
+    
 
     if (applyAfter) {
       applyAfter.insertAdjacentElement("afterend", dragging);
@@ -33,7 +35,7 @@ coluna.forEach((item) => {
 function getNewPosition(coluna, posY) {
   const cards = coluna.querySelectorAll(".item:not(.dragging)");
   let result;
-
+ 
   for (let refer_card of cards) {
     const box = refer_card.getBoundingClientRect();
     const boxCenterY = box.y + box.height / 2;
