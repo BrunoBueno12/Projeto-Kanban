@@ -3,15 +3,15 @@
 /* Credenciais do banco de dados. Supondo que você esteja executando o MySQL
 servidor com configuração padrão (usuário 'root' sem senha) */
 
-define('DB_SERVER', 'kanbanti.mysql.uhserver.com');
+/*define('DB_SERVER', 'kanbanti.mysql.uhserver.com');
 define('DB_USERNAME', 'kanbanti');
 define('DB_PASSWORD', 'FtAC@ffTb8Pq8i.');
-define('DB_NAME', 'kanbanti');
+define('DB_NAME', 'kanbanti'); */
 
-    /*define('DB_SERVER', 'localhost');
+    define('DB_SERVER', 'localhost');
     define('DB_USERNAME', 'root');
     define('DB_PASSWORD', '');
-    define('DB_NAME', 'projetokanban');*/
+    define('DB_NAME', 'kanbanti');
  
 /* Tentativa de conexão com o banco de dados MySQL */
 try{

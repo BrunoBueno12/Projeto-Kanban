@@ -57,7 +57,7 @@ body{
     border: none;
     border-radius: 0.5vh;
     background-color: #51aa9a;
-    padding-bottom: 6vh;
+    padding-bottom: 7vh;
   }
 
   #sair2 img{
@@ -143,7 +143,7 @@ body{
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
     margin-left: 5vw;
-    min-height: 75vh;
+    min-height: 70vh;
     height: max-content;
   }
   
@@ -161,10 +161,11 @@ body{
 /* corrigir overflow*/
 
   .decTarefa{
-    text-overflow: ellipsis;
-    white-space: break-word;
-    height: 10vh;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* número de linhas que você quer exibir */
+    -webkit-box-orient: vertical;
     overflow: hidden;
+    text-overflow: ellipsis;    
   }
 
   .item:hover{
@@ -200,6 +201,7 @@ body{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 4.5vh;
     top: 20vh;
+    padding-top: 1vh;
   }
 
   .adicionar{
@@ -279,6 +281,33 @@ body{
     margin-bottom: 0px;
     font-size: 0.8em;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+
+  #excluir{
+    background-color: #51aa9a;
+    border: none;
+    margin: 5%;
+    width: 12vw;
+    height: 6vh;
+    font-size: 1.2em;
+    color: black;
+    margin-bottom: 5vh;
+  }
+
+  #atualizar{
+    background-color: #51aa9a;
+    border: none;
+    margin: 5%;
+    width: 12vw;
+    height: 6vh;
+    font-size: 1.2em;
+    color: black;
+    margin-bottom: 5vh;
+  }
+
+  #swal2-title{
+    color: #000;
+    margin-bottom: 5vh;
   }
 
   @media only screen and (max-width: 800px) {

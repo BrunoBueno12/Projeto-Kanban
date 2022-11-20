@@ -48,10 +48,37 @@ function getNewPosition(coluna, posY) {
 //---
 
 $('.opition').click(function(){
-    alert ("Editar ou excluir");
-})
+  const id = $( this );
+  const idItem = id.val();
 
+  Swal.fire({
+    title: 'Deseja Atualizar ou Deletar',       
+    inputAttributes: {
+      autocapitalize: 'off',
+    },
+    background: '#EEEEEE',  
     
+      html:
+      "<button id='excluir'>Deletar</button>" +
+      "<button id='atualizar'>Atualizar</button>",
+
+    showConfirmButton: false,
+    confirmButtonColor: "#fff03",
+    })
+
+
+    $('#excluir').click(function(){
+      console.log (idItem);
+      location.assign(`./PHP/excluir.php?idItem=${idItem}`);
+    })
+
+    $('#atualizar').click(function(){
+      console.log (idItem);
+      location.assign(`./PHP/atualizarTarefa.php?idItem=${idItem}`);
+    })
+
+})
+  
     $('#adicionar').click(function(){
         Swal.fire({
           title: 'Adicone nova Tarefa',       

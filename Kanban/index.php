@@ -72,7 +72,7 @@ $idUsuario = isset($_SESSION['id']) ? $_SESSION['id'] : "0";
             echo "<div class='item' data-id='" . $r['id'] . "'draggable='true'> 
             <h3 class='tituloTarefa'>" . $r['titulo'] . "</h3> <p class='decTarefa'>"
             . $r['descricao'] . "</p> <h5 class='respTarefa'> Responsavel: " . $r['responsavel'] . 
-            "<button class='opition'><img src='./imagem/opcoes.png' width='20px' height='20px'></button></div>"
+            "<button value='" . $r['id'] . "'class='opition'><img src='./imagem/opcoes.png' width='20px' height='20px'></button></div>"
         ?>
 
       </div>
@@ -98,7 +98,7 @@ $idUsuario = isset($_SESSION['id']) ? $_SESSION['id'] : "0";
             echo "<div class='item' data-id='" . $r['id'] . "'draggable='true'> 
             <h3 class='tituloTarefa'>" . $r['titulo'] . "</h3> <p class='decTarefa'>"
             . $r['descricao'] . "</p> <h5 class='respTarefa'> Responsavel: " . $r['responsavel'] . 
-            "<button class='opition'><img src='./imagem/opcoes.png' width='20px' height='20px'></button></div>"
+            "<button value='" . $r['id'] . "'class='opition'><img src='./imagem/opcoes.png' width='20px' height='20px'></button></div>"
         ?>
 
       </div>
@@ -123,7 +123,7 @@ $idUsuario = isset($_SESSION['id']) ? $_SESSION['id'] : "0";
             echo "<div class='item' data-id='" . $r['id'] . "'draggable='true'> 
             <h3 class='tituloTarefa'>" . $r['titulo'] . "</h3> <p class='decTarefa'>"
             . $r['descricao'] . "</p> <h5 class='respTarefa'> Responsavel: " . $r['responsavel'] . 
-            "<button class='opition'><img src='./imagem/opcoes.png' width='20px' height='20px'></button></div>"
+            "<button value='" . $r['id'] . "'class='opition'><img src='./imagem/opcoes.png' width='20px' height='20px'></button></div>"
         ?>
       
       </div>
@@ -139,6 +139,7 @@ $idUsuario = isset($_SESSION['id']) ? $_SESSION['id'] : "0";
     <script src="bootstrap-5.2.2-dist/js/bootstrap.min.js"></script>
     <script src="./Js/index.js"></script>
     <script src="./SweetAlert/dist/sweetalert2.js"></script>
+
 
 
 </body>
