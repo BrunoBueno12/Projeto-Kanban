@@ -10,8 +10,11 @@
     <title>Projeto Kanban</title>
 </head>
 
+
+
 <?php
 session_start();
+error_reporting(E_ERROR);
 
 $usuarioLogado = isset($_SESSION['logado']) ? $_SESSION['logado'] : false;
 
@@ -67,12 +70,17 @@ $idUsuario = isset($_SESSION['id']) ? $_SESSION['id'] : "0";
             $resultado = $bd->query($sql);
             $registros = $resultado -> fetchAll();
 
-            foreach ($registros as $r)
+            foreach ($registros as $r){
 
-            echo "<div class='item' data-id='" . $r['id'] . "'draggable='true'> 
+            $id = $r['id'];
+
+            $idCrip = urlencode(openssl_encrypt($id, "AES-256-CBC","kanban", ));
+
+            echo "<div class='item' data-id='" . $idCrip . "'draggable='true'> 
             <h3 class='tituloTarefa'>" . $r['titulo'] . "</h3> <p class='decTarefa'>"
             . $r['descricao'] . "</p> <h5 class='respTarefa'> Responsavel: " . $r['responsavel'] . 
-            "<button value='" . $r['id'] . "'class='opition'><img src='./imagem/opcoes.png' width='20px' height='20px'></button></div>"
+            "<button value='" . $idCrip . "'class='opition'><img src='./imagem/opcoes.png' width='20px' height='20px'></button></div>";
+            }
         ?>
 
       </div>
@@ -93,12 +101,17 @@ $idUsuario = isset($_SESSION['id']) ? $_SESSION['id'] : "0";
             $resultado = $bd->query($sql);
             $registros = $resultado -> fetchAll();
 
-            foreach ($registros as $r)
+            foreach ($registros as $r) {
+              
+            $id = $r['id'];
 
-            echo "<div class='item' data-id='" . $r['id'] . "'draggable='true'> 
+            $idCrip = urlencode(openssl_encrypt($id, "AES-256-CBC","kanban", ));
+
+            echo "<div class='item' data-id='" . $idCrip . "'draggable='true'> 
             <h3 class='tituloTarefa'>" . $r['titulo'] . "</h3> <p class='decTarefa'>"
             . $r['descricao'] . "</p> <h5 class='respTarefa'> Responsavel: " . $r['responsavel'] . 
-            "<button value='" . $r['id'] . "'class='opition'><img src='./imagem/opcoes.png' width='20px' height='20px'></button></div>"
+            "<button value='" . $idCrip . "'class='opition'><img src='./imagem/opcoes.png' width='20px' height='20px'></button></div>";
+            }
         ?>
 
       </div>
@@ -118,18 +131,23 @@ $idUsuario = isset($_SESSION['id']) ? $_SESSION['id'] : "0";
             $resultado = $bd->query($sql);
             $registros = $resultado -> fetchAll();
 
-            foreach ($registros as $r)
+            foreach ($registros as $r){
 
-            echo "<div class='item' data-id='" . $r['id'] . "'draggable='true'> 
-            <h3 class='tituloTarefa'>" . $r['titulo'] . "</h3> <p class='decTarefa'>"
-            . $r['descricao'] . "</p> <h5 class='respTarefa'> Responsavel: " . $r['responsavel'] . 
-            "<button value='" . $r['id'] . "'class='opition'><img src='./imagem/opcoes.png' width='20px' height='20px'></button></div>"
+              $id = $r['id'];
+
+              $idCrip = urlencode(openssl_encrypt($id, "AES-256-CBC","kanban", ));
+
+              echo "<div class='item' data-id='" . $idCrip . "'draggable='true'> 
+              <h3 class='tituloTarefa'>" . $r['titulo'] . "</h3> <p class='decTarefa'>"
+              . $r['descricao'] . "</p> <h5 class='respTarefa'> Responsavel: " . $r['responsavel'] . 
+              "<button value='" . $idCrip . "'class='opition'><img src='./imagem/opcoes.png' width='20px' height='20px'></button></div>";
+            }
         ?>
       
       </div>
     </div>
   </div>
-
+ 
   <a href="./PHP/logout.php"><button id="sair2"> <img src="./imagem/sair.png"> Sair</button></a>
 
   <button id="adicionar" ><img id="imgAdic" src="./imagem/iconAdicionar.png" alt=""></button> 

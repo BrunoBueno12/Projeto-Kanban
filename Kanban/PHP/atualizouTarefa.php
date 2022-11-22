@@ -7,7 +7,7 @@
     $cod = isset($_POST['cod']) ?  $_POST['cod'] : '';
     $descricaoC = isset($_POST['descricaoC']) ?  $_POST['descricaoC'] : '';
     $responsavelC = isset($_POST['responsavelC']) ?  $_POST['responsavelC'] : '';
-
+    $cod = openssl_decrypt ($cod, "AES-256-CBC", "kanban",);
     
     $sql = "UPDATE tarefas SET titulo = :tituloC, descricao = :descricaoC, responsavel = :responsavelC
     WHERE id = :cod";

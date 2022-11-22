@@ -149,7 +149,7 @@ body{
   
   .item {
     position: relative;
-    font-size: 1.2em;
+   
     color: #000;
     background-color: #d3dee0;
     margin-top: 0.8vh;
@@ -161,8 +161,9 @@ body{
 /* corrigir overflow*/
 
   .decTarefa{
+    font-size: 1em;
     display: -webkit-box;
-    -webkit-line-clamp: 3; /* número de linhas que você quer exibir */
+    -webkit-line-clamp: 4; /* número de linhas que você quer exibir */
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;    
@@ -291,7 +292,9 @@ body{
     height: 6vh;
     font-size: 1.2em;
     color: black;
-    margin-bottom: 5vh;
+    margin-bottom: 6vh;
+    position: relative;
+    margin-top: 4vh;
   }
 
   #atualizar{
@@ -303,11 +306,28 @@ body{
     font-size: 1.2em;
     color: black;
     margin-bottom: 5vh;
+    position: relative;
   }
 
   #swal2-title{
     color: #000;
     margin-bottom: 5vh;
+  }
+
+  #lixeira{
+    width: 2.8vw;
+    height: 3.8vh;
+    position: absolute;
+    left: 0.8vw;
+    top: 1vh;
+  }
+
+  #editar{
+    width: 2vw;
+    height: 3.2vh;
+    position: absolute;
+    left: 1.2vw;
+    top: 1.5vh;
   }
 
   @media only screen and (max-width: 800px) {

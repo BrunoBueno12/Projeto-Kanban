@@ -52,15 +52,16 @@ $('.opition').click(function(){
   const idItem = id.val();
 
   Swal.fire({
-    title: 'Deseja Atualizar ou Deletar',       
+    title: 'Deseja Atualizar ou Deletar',
+    width: '35vw',       
     inputAttributes: {
       autocapitalize: 'off',
     },
     background: '#EEEEEE',  
     
       html:
-      "<button id='excluir'>Deletar</button>" +
-      "<button id='atualizar'>Atualizar</button>",
+      "<button id='excluir'> <img src='./imagem/iconeLixeira.png' id='lixeira'> Deletar</button>" +
+      "<button id='atualizar'> <img src='./imagem/iconeEditar.png' id='editar'> Atualizar</button>",
 
     showConfirmButton: false,
     confirmButtonColor: "#fff03",

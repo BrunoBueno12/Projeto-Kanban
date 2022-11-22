@@ -3,6 +3,7 @@ include_once "bd.php";
 
 $situacao = $_GET['coluna'];
 $item = $_GET['item'];
+$item = openssl_decrypt ($item, "AES-256-CBC", "kanban",);
 
     $sql = "UPDATE tarefas SET situacao = :situacao  WHERE  id = :item";
       

@@ -13,7 +13,7 @@
             include_once "bd.php";
             
             $idItem = $_GET['idItem'];
-
+            $idItem = openssl_decrypt ($idItem, "AES-256-CBC", "kanban",);
 
             $sql = "SELECT * FROM tarefas WHERE id = $idItem";
             $resultado = $bd->query($sql);
@@ -32,6 +32,7 @@
                     <label for='responsavelC'>Responsável</label>
                     <input value='" . $r['responsavel'] . "' type='text' class='adicionar' name='responsavelC' id='responsavelC' placeholder='Responsável'><br>
                     <button value='submit' data-id='" .$idItem. "'id='salvar'>Salvar Alterações</button>
+                    <button href='./index.php' id='cancelar'>Cancelar</button>
                     <INPUT TYPE='hidden' name='cod' id='cod' VALUE=" .$idItem. ">
                 </form>"
              
