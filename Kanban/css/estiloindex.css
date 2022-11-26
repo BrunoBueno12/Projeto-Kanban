@@ -57,12 +57,13 @@ body{
     border: none;
     border-radius: 0.5vh;
     background-color: #51aa9a;
-    padding-bottom: 7vh;
+    padding-bottom: 8vh;
   }
 
   #sair2 img{
-    height: 4vh;
+    height: 5vh;
     width: 2vw;
+    padding-bottom: 1vh;
   }
 
   nav{
@@ -74,23 +75,23 @@ body{
   nav h1{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 4em;
-    margin-left: 6.5vw;
+    margin-left: 7.5vw;
     padding-top: 2vh;
     color: #FFF;
   }
 
-  nav img{
+  #imgNav{
     position: absolute;
-    left: 2vw;
+    left: 1vw;
     top: 4.2vh;
-    width: 3.5vw;
-    height: 6vh;
+    width: 4.5vw;
+    height: 8vh;
   }
 
   #infoUsuario{
     position: absolute;
     right: 5vw;
-    top: 3.5vh;
+    top: 3.2vh;
     margin-right: 4vh;
   }
 
@@ -98,7 +99,8 @@ body{
     width: 3.4vw;
     height: 6.7vh;
     position: absolute;
-    top: 1vh;
+    top: 1.6vh;
+    left: 2vw;
   }
 
   #nomeUsuario{

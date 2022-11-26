@@ -32,7 +32,7 @@ $idUsuario = isset($_SESSION['id']) ? $_SESSION['id'] : "0";
 <body>
   <nav>
     <h1>Quadro de Tarefas</h1>
-    <img src="./imagem/nave.png" width="60px" height="60px">
+    <img id='imgNav' src="./imagem/nave.png" width="60px" height="60px">
 
     <div id='infoUsuario'>
     <p id='nomeUsuario'><?php echo " $nomeUsuario " ?></p>
