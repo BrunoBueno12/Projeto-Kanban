@@ -1,33 +1,79 @@
 body{
-    margin-top: 25vh;
-}
-#FormCad{
-    background-color: #2b7f94;
-    width: max-content;
-    height:max-content;
-    padding: 4vw;
-    padding-top: 3.5vh;
-    padding-bottom: 5vh;
-    margin: auto auto;   
-    border-radius: 3vh;
-}
-
-form{
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../imagem/KanbanLogin.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
-.entrada{
-    margin-bottom: 2vh;
-    height: 2vh;
-    width: 100%;
+#entrada{
+    font-size: 25px;
+    position: absolute;
+    width: 50%;
+    height: 71.5%;
+    padding-top: -1vh;
+    left: 14vw;
+    padding-left: 18px;
 }
 
-#FormCad h1{
-    margin-top: 0;
+label{
+    color: rgb(0, 0, 0);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: block;
+    font-size: 1em;
+    margin-top: 2vh;
+    margin-bottom: 3vh;
+}
+
+input{
+    width: 30vw;
+    height: 5vh;
+    border:none;
+    border-bottom: 1px solid rgba(44, 72, 128, 0.581);
+    outline: none;
+    background-color: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: (10px);
+    font-size: 15px;
+}
+
+#titulo{
+    color: rgb(0, 0, 0);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 4vh;
     text-align: center;
+    top: 0vh;
 }
 
 #botao{
-    width: 103%;
-    height: 4vh;
+    font-size: 1.5em;
+    position: absolute;
+    display: block;
+    margin-top: 7vh;
+    background-color: #1dbdb2;
+    border-radius: 5px;
+    border: none;
+    width: 98%;
+    height: 9vh;
+}
+
+#quadroLogin{
+    margin-top: 3vh;
+    width: 63vw;
+    height: 88vh;
+    border-radius: 10px;
+    color: white;
+    background-color: rgba(26, 152, 154, 0.243);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: (5px);
+}
+
+form{
+    position: relative;
 }

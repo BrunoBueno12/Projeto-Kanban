@@ -53,7 +53,7 @@ $('.opition').click(function(){
 
   Swal.fire({
     title: 'Deseja Atualizar ou Deletar',
-    width: '35vw',       
+    width: '40vw',       
     inputAttributes: {
       autocapitalize: 'off',
     },
@@ -69,8 +69,29 @@ $('.opition').click(function(){
 
 
     $('#excluir').click(function(){
-      console.log (idItem);
-      location.assign(`./PHP/excluir.php?idItem=${idItem}`);
+
+        Swal.fire({
+          title: 'Deseja Deletar a Tarefa?',
+          text: "Você irá excluir a tarefa permanetemente",
+          icon: 'warning',
+          showCancelButton: true,
+          confirmButtonColor: '#3085d6',
+          cancelButtonColor: '#d33',
+          confirmButtonText: 'Sim, deletar',
+          cancelButtonText: 'Cancelar',
+        }).then((result) => {
+          if (result.isConfirmed) {
+            Swal.fire(
+              'Deletado',
+              'Tarefa deletada com sucesso',
+              'success'
+            )
+            console.log (idItem);
+            location.assign(`./PHP/excluir.php?idItem=${idItem}`);
+          }
+        })
+
+      
     })
 
     $('#atualizar').click(function(){

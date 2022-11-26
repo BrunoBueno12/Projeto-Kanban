@@ -30,7 +30,7 @@ if($usuarioLogado == true){
 
        <!-- <img id="img" src="./imagem/kanbanimg.png"> -->
 
-        <div id="titulo"><h1>KANBAN</h1></div>
+        <div id="titulo"><h1>LOGIN KANBAN</h1></div>
 
         <div id="entrada">
             <form action="./PHP/logar.php" method="post">
@@ -42,12 +42,18 @@ if($usuarioLogado == true){
             <input type="password" name="senha" class="inLogin"> 
 
             <button value="submit" id="botao">Entrar</button>
-
+ 
             </form>
         </div>
+        <footer>
+            <div id='rodape'>
+                <p>Anda não tem um cadastro?</p>
+                <a href='cadastro.php'><button  id='botaoCad'>Cadastrar</button></a>
+            </div>
+        </footer>
     </div>
 
-    <a  href='cadastro.php'><button id='botaoCad'>Cadastrar</button></a>
+    
     
 </body>
 </html>

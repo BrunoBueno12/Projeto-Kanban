@@ -173,12 +173,10 @@ body{
     cursor: grab;
   }
 
-  .item:active{
-    cursor: grabbing;
-  }
-
   .dragging {
     opacity: 0.5;
+    background-color: #8da7a8;
+    cursor: grabbing;
   }
 
   .topico{ 
@@ -288,8 +286,8 @@ body{
     background-color: #51aa9a;
     border: none;
     margin: 5%;
-    width: 12vw;
-    height: 6vh;
+    width: 14vw;
+    height: 6.5vh;
     font-size: 1.2em;
     color: black;
     margin-bottom: 6vh;
@@ -301,8 +299,8 @@ body{
     background-color: #51aa9a;
     border: none;
     margin: 5%;
-    width: 12vw;
-    height: 6vh;
+    width: 14vw;
+    height: 6.5vh;
     font-size: 1.2em;
     color: black;
     margin-bottom: 5vh;
@@ -313,6 +311,7 @@ body{
     color: #000;
     margin-bottom: 5vh;
   }
+
 
   #lixeira{
     width: 2.8vw;
@@ -374,6 +373,16 @@ body{
 
     .decTarefa{
       max-width: max-content;
+    }
+
+    #lixeira{
+      width: 0vw;
+      height: 0vh;
+    }
+  
+    #editar{
+      width: 0vw;
+      height: 0vh;
     }
 
   }

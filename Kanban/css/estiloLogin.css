@@ -1,7 +1,7 @@
 body{
     width: 100vw;
     height: 100vh;
-    background-image: url(../imagem/kanban-industria40.jpg);
+    background-image: url(../imagem/KanbanLogin.png);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -13,20 +13,24 @@ body{
 }
 
 #quadroLogin{
-    position: absolute;
+    margin-top: 3vh;
     width: 63vw;
-    height: 80vh;
+    height: 88vh;
     border-radius: 10px;
     color: white;
-    background-color: rgba(16, 122, 123, 0.1);
+    background-color: rgba(26, 152, 154, 0.243);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: (5px);
+}
+
+form{
+    position: relative;
 }
 
 #entrada{
     font-size: 25px;
     position: absolute;
-    width: 80%;
+    width: 50%;
     height: 71.5%;
     padding-top: 0vh;
     left: 14vw;
@@ -34,7 +38,7 @@ body{
 }
 
 label{
-    color: rgb(243, 239, 239);
+    color: rgb(0, 0, 0);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     display: block;
     font-size: 1.5em;
@@ -63,7 +67,7 @@ input{
 }
 
 #titulo{
-    color: #FFF;
+    color: rgb(0, 0, 0);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 4vh;
     text-align: center;
@@ -80,33 +84,63 @@ input{
 
 #botao{
     font-size: 1.5em;
+    position: absolute;
     display: block;
-    margin-top: 10vh;
-    background-color: #30bcef;
+    margin-top: 7vh;
+    background-color: #1dbdb2;
     border-radius: 5px;
     border: none;
-    width: 30vw;
-    height: 7vh;
+    width: 98%;
+    height: 9vh;
 }
 
-#botao{
+#botao:hover{
     cursor: pointer;
 }
 
-#botaoCad{
+footer{
+    border-top: solid 0.5px black;
     position: absolute;
-    bottom: 2vh;
-    right: 2vw;
-    font-size: 1.5em;
-    background-color: #30bcef;
+    bottom: 0vh;
+    padding-top: 3.5vh;
+    padding-bottom: 3vh;
+    width: 100%;
+    background-color: rgba(11, 61, 62, 0.509);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: (5px);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+footer p{
+    display: inline;
+    margin-right: 10px;
+    font-size: 1em;
+    color: black;
+}
+
+#botaoCad{
+    display: inline;
+    font-size: 0.9em;
+    background-color: #1dbdb2;
     border-radius: 5px;
     border: none;
-    width: 8vw;
-    height: 7vh;
+    width: 10vw;
+    height: 3.5vh;
+}
+
+#rodape{
+    position: absolute;
+    right: 3vw;
+    bottom: 1.4vh;
 }
 
 #botaoCad:hover{
     cursor: pointer;
+}
+
+a{
+    text-decoration: none
 }
 
 
@@ -130,21 +164,24 @@ input{
     #botao{
         font-size: 1.5em;
         display: block;
-        margin-top: 20px;
-        background-color: #30bcef;
+        margin-top: 7vh;
         border-radius: 5px;
         border: none;
-        width: 80%;
+        width: 100%;
         height: 9vh;
     }
 
     #entrada{
         font-size: 25px;
         position: absolute;
-        width: 100%;
+        width: 50%;
         height: 71.5%;
-        padding-top: 23vh;
         right: 0px;
-        
+    }
+
+    #botaoCad{
+        font-size: 0.8em;
+        width: 12.8vw;
+        height: 3.7vh;
     }
   }

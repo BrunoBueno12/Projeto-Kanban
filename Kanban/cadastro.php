@@ -9,18 +9,29 @@
 </head>
 
 <body>
+    <div id="quadroLogin">
+        <div id="titulo"><h1>CADASTRRO KANBAN</h1></div>
 
+        <div id="entrada">
+            <form action="./PHP/cadastrar.php" method="post">
 
-    <div id='FormCad'>
-    <h1>Cadastrar Usuário</h1>
-    <form action="./PHP/cadastrar.php" method="post">
-    <input class='entrada' type="text" placeholder="Nome" name="nome">  <br>
-    <input class='entrada' type="email" placeholder="E-mail" name="email"> <br>
-    <input class='entrada' type="password" placeholder="Senha" name="senha"> <br>
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" id='nome' class="inLogin">
 
-    <input id='botao' type="submit" value="Cadastrar">
-    </form>
+            <label for="email">E-mail:</label>
+            <input type="email" name="email" id='email' class="inLogin"> 
+
+            <label for="senha">Senha:</label> 
+            <input type="password" name="senha" id='senha' class="inLogin"> 
+
+            <button value="submit" id="botao">Cadastrar</button>
+
+            
+            </form>
+        </div>
+        
     </div>
+
 </body>
 </html>
 

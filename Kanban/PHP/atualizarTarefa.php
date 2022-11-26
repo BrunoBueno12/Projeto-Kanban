@@ -19,7 +19,7 @@
             $resultado = $bd->query($sql);
             $registros = $resultado -> fetchAll();
 
-            foreach ($registros as $r)
+            foreach ($registros as $r){
 
             echo "<form form id='formAdd' action='./atualizouTarefa.php' method='post' autocomplete = 'off'>
                     <h1>Editar Tarefa</h1>
@@ -34,8 +34,8 @@
                     <button value='submit' data-id='" .$idItem. "'id='salvar'>Salvar Alterações</button>
                     <button href='./index.php' id='cancelar'>Cancelar</button>
                     <INPUT TYPE='hidden' name='cod' id='cod' VALUE=" .$idItem. ">
-                </form>"
-             
+                </form>";
+            }
 ?>
     
     
