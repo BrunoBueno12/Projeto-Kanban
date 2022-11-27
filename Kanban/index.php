@@ -27,6 +27,19 @@ $nomeUsuario = isset($_SESSION['nome']) ? $_SESSION['nome'] : "Sem nome";
 
 $idUsuario = isset($_SESSION['id']) ? $_SESSION['id'] : "0";
 
+$vazio = 0;
+
+include_once "./PHP/bd.php";
+            
+            $sql = "SELECT * FROM tarefas WHERE usuario = $idUsuario";
+            $resultado = $bd->query($sql);
+            $registros = $resultado -> fetchAll();
+
+            if (count($registros) > 0){
+              $vazio = 1;
+            }
+
+
 ?>
 
 <body>
@@ -70,17 +83,23 @@ $idUsuario = isset($_SESSION['id']) ? $_SESSION['id'] : "0";
             $resultado = $bd->query($sql);
             $registros = $resultado -> fetchAll();
 
+        if ($vazio > 0){
             foreach ($registros as $r){
 
-            $id = $r['id'];
+                $id = $r['id'];
 
-            $idCrip = urlencode(openssl_encrypt($id, "AES-256-CBC","kanban", ));
+                $idCrip = urlencode(openssl_encrypt($id, "AES-256-CBC","kanban", ));
 
-            echo "<div class='item' data-id='" . $idCrip . "'draggable='true'> 
-            <h3 class='tituloTarefa'>" . $r['titulo'] . "</h3> <p class='decTarefa'>"
-            . $r['descricao'] . "</p> <h5 class='respTarefa'> Responsavel: " . $r['responsavel'] . 
-            "<button value='" . $idCrip . "'class='opition'><img src='./imagem/opcoes.png' width='20px' height='20px'></button></div>";
-            }
+                echo "<div class='item' data-id='" . $idCrip . "'draggable='true'> 
+                <h3 class='tituloTarefa'>" . $r['titulo'] . "</h3> <p class='decTarefa'>"
+                . $r['descricao'] . "</p> <h5 class='respTarefa'> Responsavel: " . $r['responsavel'] . 
+                "<button value='" . $idCrip . "'class='opition'><img src='./imagem/opcoes.png' width='20px' height='20px'></button></div>";
+
+          }
+        }
+        else{
+          echo '<img src="./imagem/vazio.png" id=vazio>';
+        }
         ?>
 
       </div>
@@ -101,17 +120,25 @@ $idUsuario = isset($_SESSION['id']) ? $_SESSION['id'] : "0";
             $resultado = $bd->query($sql);
             $registros = $resultado -> fetchAll();
 
-            foreach ($registros as $r) {
-              
-            $id = $r['id'];
-
-            $idCrip = urlencode(openssl_encrypt($id, "AES-256-CBC","kanban", ));
-
-            echo "<div class='item' data-id='" . $idCrip . "'draggable='true'> 
-            <h3 class='tituloTarefa'>" . $r['titulo'] . "</h3> <p class='decTarefa'>"
-            . $r['descricao'] . "</p> <h5 class='respTarefa'> Responsavel: " . $r['responsavel'] . 
-            "<button value='" . $idCrip . "'class='opition'><img src='./imagem/opcoes.png' width='20px' height='20px'></button></div>";
+            if ($vazio > 0){
+              foreach ($registros as $r){
+  
+                  $id = $r['id'];
+  
+                  $idCrip = urlencode(openssl_encrypt($id, "AES-256-CBC","kanban", ));
+  
+                  echo "<div class='item' data-id='" . $idCrip . "'draggable='true'> 
+                  <h3 class='tituloTarefa'>" . $r['titulo'] . "</h3> <p class='decTarefa'>"
+                  . $r['descricao'] . "</p> <h5 class='respTarefa'> Responsavel: " . $r['responsavel'] . 
+                  "<button value='" . $idCrip . "'class='opition'><img src='./imagem/opcoes.png' width='20px' height='20px'></button></div>";
+  
             }
+          }
+          else{
+            echo '<img src="./imagem/vazio.png" id=vazio>';
+          }
+
+            
         ?>
 
       </div>
@@ -131,17 +158,23 @@ $idUsuario = isset($_SESSION['id']) ? $_SESSION['id'] : "0";
             $resultado = $bd->query($sql);
             $registros = $resultado -> fetchAll();
 
-            foreach ($registros as $r){
-
-              $id = $r['id'];
-
-              $idCrip = urlencode(openssl_encrypt($id, "AES-256-CBC","kanban", ));
-
-              echo "<div class='item' data-id='" . $idCrip . "'draggable='true'> 
-              <h3 class='tituloTarefa'>" . $r['titulo'] . "</h3> <p class='decTarefa'>"
-              . $r['descricao'] . "</p> <h5 class='respTarefa'> Responsavel: " . $r['responsavel'] . 
-              "<button value='" . $idCrip . "'class='opition'><img src='./imagem/opcoes.png' width='20px' height='20px'></button></div>";
+            if ($vazio > 0){
+              foreach ($registros as $r){
+  
+                  $id = $r['id'];
+  
+                  $idCrip = urlencode(openssl_encrypt($id, "AES-256-CBC","kanban", ));
+  
+                  echo "<div class='item' data-id='" . $idCrip . "'draggable='true'> 
+                  <h3 class='tituloTarefa'>" . $r['titulo'] . "</h3> <p class='decTarefa'>"
+                  . $r['descricao'] . "</p> <h5 class='respTarefa'> Responsavel: " . $r['responsavel'] . 
+                  "<button value='" . $idCrip . "'class='opition'><img src='./imagem/opcoes.png' width='20px' height='20px'></button></div>";
+  
             }
+          }
+          else{
+            echo '<img src="./imagem/vazio.png" id=vazio>';
+          }
         ?>
       
       </div>

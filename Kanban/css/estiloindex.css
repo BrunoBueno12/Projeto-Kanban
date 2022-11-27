@@ -331,6 +331,12 @@ body{
     top: 1.5vh;
   }
 
+  #vazio{
+    height: 30vh;
+    width: 15vw;
+    margin-left: 3.5vw;
+  }
+
   @media only screen and (max-width: 800px) {
   .kanban {
     display: block;
